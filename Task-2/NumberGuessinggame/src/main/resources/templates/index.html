@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Number Guessing Game</title>
+</head>
+<body>
+    <h1>Number Guessing Game</h1>
+    <p>Guess a number between 1 and 100:</p>
+    <form method="post" th:action="@{/guess}">
+        <input type="number" name="guess" min="1" max="100" required>
+        <button type="submit">Submit Guess</button>
+    </form>
+    <p th:text="${result}"></p>
+</body>
+</html>
